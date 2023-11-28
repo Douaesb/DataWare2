@@ -1,0 +1,86 @@
+# DataWare - Système de Gestion des Ressources Humaines
+
+DataWare, entreprise innovante, a confié à notre équipe la mission de développer un système de gestion des ressources humaines. Cette application utilise les langages PHP et SQL pour répondre de manière optimale aux exigences de DataWare en matière de gestion du personnel.
+
+## Fonctionnalités
+
+- **Gestion des Équipes**
+  - Ajout, modification et suppression d'équipes.
+  - Affichage des détails de chaque équipe.
+
+- **Gestion des Employés**
+  - Ajout, modification et suppression d'employés.
+  - Attribution d'employés à des équipes.
+
+## Technologies Utilisées
+
+- PHP
+- SQL (MySQL)
+- HTML5
+- CSS3 (utilisation de Tailwind CSS pour le design)
+
+## Configuration et Installation
+
+1. **Cloner le Répertoire**
+    ```bash
+    git clone https://github.com/votre-utilisateur/DataWare.git
+    ```
+
+2. **Importer la Base de Données**
+    - Créer une base de données MySQL (ou tout autre système de gestion de base de données pris en charge).
+    - Importer le fichier SQL fourni dans le répertoire `database/`.
+
+3. **Configurer la Connexion à la Base de Données**
+    - Modifier les paramètres de connexion à la base de données dans le fichier `connection.php`.
+
+4. **Lancer l'Application**
+    - Accéder à l'application via un navigateur web.
+
+## Diagramme UML
+
+- Un diagramme UML décrivant l'architecture de l'application peut être consulté [ici](# DataWare - Système de Gestion des Ressources Humaines
+
+DataWare, entreprise innovante, a confié à notre équipe la mission de développer un système de gestion des ressources humaines. Cette application utilise les langages PHP et SQL pour répondre de manière optimale aux exigences de DataWare en matière de gestion du personnel.
+
+## Fonctionnalités
+
+- **Gestion des Équipes**
+  - Ajout, modification et suppression d'équipes.
+  - Affichage des détails de chaque équipe.
+
+- **Gestion des Employés**
+  - Ajout, modification et suppression d'employés.
+  - Attribution d'employés à des équipes.
+
+## Technologies Utilisées
+
+- PHP
+- SQL (MySQL, PostgreSQL, etc.)
+- HTML5
+- CSS3 (utilisation de Tailwind CSS pour le design)
+
+## Configuration et Installation
+
+1. **Cloner le Répertoire**
+    ```bash
+    git clone https://github.com/Douaesb/DataWare.git
+    ```
+
+2. **Importer la Base de Données**
+    - Créer une base de données MySQL (ou tout autre système de gestion de base de données pris en charge).
+    - Importer le fichier SQL fourni dans le répertoire `database/`.
+
+3. **Configurer la Connexion à la Base de Données**
+    - Modifier les paramètres de connexion à la base de données dans le fichier `connection.php`.
+
+4. **Lancer l'Application**
+    - Accéder à l'application via un navigateur web.
+
+## Diagramme UML
+
+- Un diagramme UML décrivant l'architecture de l'application peut être consulté [ici](https://lucid.app/lucidchart/ec79fbf6-254b-4ca6-b30f-3354fe3787b5/edit?viewport_loc=-220%2C863%2C2492%2C1108%2CjPcNK1PrISnW&invitationId=inv_9a3c476a-ed2e-489f-8113-ca83dff471ae).
+
+
+## Auteurs
+
+- [Douae Sebti](https://github.com/Douaesb)
