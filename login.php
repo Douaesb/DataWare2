@@ -20,33 +20,35 @@
                     require('connection.php');
                     $message = '';
 
-                    if (isset($_POST['email'])) {
-                        $email = stripslashes($_REQUEST['email']);
-                        $email = mysqli_real_escape_string($conn, $email);
-                        $password = stripslashes($_REQUEST['pass']);
-                        $password = mysqli_real_escape_string($conn, $password);
-                        $query = "SELECT * FROM `utilisateur` WHERE email='$email' and pass='$password'";
-                        // $query = "SELECT * FROM `utilisateur` WHERE email='$email' and pass='" . hash('sha256', $password) . "'";
+                    if (isset($_POST['email']) && isset($_POST['pass'])) {
+                        $email = $_POST['email'];
+                        $password = $_POST['pass'];
+
+                        $query = "SELECT * FROM `utilisateur` WHERE email='$email' AND pass='$password'";
 
                         $result = mysqli_query($conn, $query);
-                        if ($result !== false) { // Vérifiez si $result est différent de false
-                            session_start();
+
+                        if ($result !== false) {
                             $userData = mysqli_fetch_assoc($result);
-                            
+
                             if ($userData) {
+                                session_start();
                                 $_SESSION['id'] = $userData['id'];
-                                if ($userData['role'] == 'membre') {
-                                    $_SESSION['email'] = $email;
-                                    header("Location: dashboardm.php");
-                                    exit();
-                                } else if ($userData['role'] == 'ProductOwner') {
-                                    $_SESSION['email'] = $email;
-                                    header("Location: dashboardp.php");
-                                    exit();
-                                } else if ($userData['role'] == 'ScrumMaster') {
-                                    $_SESSION['email'] = $email;
-                                    header("Location: dashboards.php");
-                                    exit();
+                                $role = $userData['role'];
+
+                                switch ($role) {
+                                    case 'membre':
+                                        $_SESSION['email'] = $email;
+                                        header("Location: dashboardm.php");
+                                        exit();
+                                    case 'ProductOwner':
+                                        $_SESSION['email'] = $email;
+                                        header("Location: dashboardp.php");
+                                        exit();
+                                    case 'ScrumMaster':
+                                        $_SESSION['email'] = $email;
+                                        header("Location: dashboards.php");
+                                        exit();
                                 }
                             } else {
                                 $message = "L'email ou le mot de passe est incorrect.";
