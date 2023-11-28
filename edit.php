@@ -35,33 +35,37 @@ if (isset($_GET['id_equipe'])) {
 </head>
 
 <body>
-    <div>
-        <div>
+    <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+
+    <div class="mx-auto max-w-lg">
+
             <div>
-                    <h2>Edit equipe record:</h2>
                     
-                    <form action="" method="post">
+                    <form action="" method="post" class="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
                         <div>
                         <input type="hidden" name="id_equipe" value="<?php echo $id; ?>">
                         <label for="" class="block text-sm font-medium leading-6 text-gray-900">Nom Equipe</label>
-                        <div class="relative mt-2 rounded-md shadow-sm">
-                            <input type="text" name="nom_equipe" value="<?php echo $name; ?>" id="" class="block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        <div class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm" >
+                            <input type="text" name="nom_equipe" value="<?php echo $name; ?>" id="" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">
                         </div>
                     </div>
                     <div>
                         <label for="" class="block text-sm font-medium leading-6 text-gray-900">Date de Création</label>
                         <div class="relative mt-2 rounded-md shadow-sm">
-                            <input type="text" name="date_creation" value="<?php echo $date; ?>" id="" class="block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="date" name="date_creation" value="<?php echo $date; ?>" id="" class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm">
                         </div>
                     </div>
 
-                        <button type="submit" name="edit">Save changes</button>
+                        <button type="submit" name="edit" class="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white">Save changes</button>
+                        <div class="">
+                        <button type="submit" name="submit" class="block py-2 px-3 text-pink-500 font-bold rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><a href="dashboards.php" class="">Retour</a>
+                                </button>
+            </div>
                     </form>
+            
             </div>
 
-            <div class="">
-                <a href="dashboards.php">Go back</a>
-            </div>
+           
         </div>
     </div>
 </body>
@@ -74,11 +78,4 @@ if (isset($_GET['id_equipe'])) {
     }
 }
 ?>
-
-
-
-
-
-
-
 

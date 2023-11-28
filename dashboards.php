@@ -66,31 +66,34 @@ if (!isset($_SESSION["email"])) {
                     <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
                         <h1 class="mb-4 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">Affichage des equipes</h1>
                         <!-- <a href="add.php"> -->
-                        <button id="addequipe" type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Ajouter une Equipe</button>
+                        <button id="addequipe" type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 mb-6 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Ajouter une Equipe</button>
                         <div id="equipeTrigger" class="hidden"></div>
                         <div id="equipeModal" class="hidden">
                             <div class="">
-                                <h2>Ajouter une nouvelle equipe</h2>
 
                                 <form action="" method="post">
                                     <div>
                                         <label class="block text-sm font-medium leading-6 text-gray-900">Nom Equipe</label>
-                                        <div class="relative mt-2 rounded-md shadow-sm">
+                                        <div class="relative mt-2 rounded-md">
                                             <input type="text" name="nom_equipe" id="" class="block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                         </div>
                                     </div>
                                     <div>
                                         <label class="block text-sm font-medium leading-6 text-gray-900">Date de Création</label>
-                                        <div class="relative mt-2 rounded-md shadow-sm">
+                                        <div class="relative mt-2 rounded-md">
                                             <input type="date" name="date_creation" id="" class="block rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                         </div>
                                     </div>
-                                    <button type="submit" name="submit">Ajouter</button>
+                                    <button type="submit" name="submit" class=" mt-4 ml-14 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ajouter</button>
+
                                 </form>
                             </div>
 
                             <div class="">
-                                <a href="dashboards.php" class="">Retour</a>
+                                <button type="submit" name="submit" class="block py-2 px-3 text-pink-500 font-bold rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><a href="dashboards.php" class="">Retour</a>
+                                </button>
+
+
                             </div>
                         </div>
                         </a>
@@ -171,11 +174,10 @@ if (!isset($_SESSION["email"])) {
                 <div class="sm:flex sm:items-center">
                     <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
                         <h1 class="mb-4 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">Affecter projet à une equipe</h1>
-                        <button id="addeqp" type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Assigner une equipe</button>
+                        <button id="addeqp" type="button" class="inline-flex items-center justify-center rounded-md mb-4 border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Assigner une equipe</button>
                         <div id="eqpTrigger" class="hidden"></div>
                         <div id="eqpModal" class="hidden">
                             <div class="">
-                                <h2>Choisir equipe pour un projet</h2>
 
                                 <form action="" method="post">
 
@@ -217,12 +219,13 @@ if (!isset($_SESSION["email"])) {
                                     </div>
 
 
-                                    <button type="submit" name="sbmt">Ajouter</button>
+                                    <button type="submit" name="submit" class=" mt-4 ml-14 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ajouter</button>
                                 </form>
                             </div>
 
                             <div class="">
-                                <a href="dashboards.php" class="">Retour</a>
+                            <button type="submit" name="submit" class="block py-2 px-3 text-pink-500 font-bold rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><a href="dashboards.php" class="">Retour</a>
+                                </button>
                             </div>
                         </div>
                         </a>
@@ -308,12 +311,11 @@ if (!isset($_SESSION["email"])) {
                         <h1 class="mb-4 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl dark:text-white">Gérer les membres des equipes </h1>
                         <!-- <a href="add.php"> -->
 
-                        <button id="addmembre" type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Ajouter membre à une equipe</button>
+                        <button id="addmembre" type="button" class="inline-flex items-center justify-center rounded-md  mb-4 border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Ajouter membre à une equipe</button>
 
                         <div id="membreTrigger" class="hidden"></div>
                         <div id="membreModal" class="hidden">
                             <div class="">
-                                <h2>Ajouter membre à une equipe</h2>
 
                                 <form action="" method="post">
 
@@ -357,12 +359,13 @@ if (!isset($_SESSION["email"])) {
                                         </div>
                                     </div>
 
-                                    <button type="submit" name="send">Ajouter</button>
+                                    <button type="submit" name="submit" class=" mt-4 ml-14 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Ajouter</button>
                                 </form>
                             </div>
 
                             <div class="">
-                                <a href="dashboards.php" class="">Retour</a>
+                            <button type="submit" name="submit" class="block py-2 px-3 text-pink-500 font-bold rounded hover:bg-blue-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"><a href="dashboards.php" class="">Retour</a>
+                                </button>
                             </div>
                         </div>
                         </a>
