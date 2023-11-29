@@ -129,7 +129,7 @@ if (!isset($_SESSION["email"])) {
 
                                         <tr>
                                             <?php
-                                            $sql = "SELECT * FROM projet";
+                                            $sql = "SELECT * FROM projet  where nom_pro <> 'none'";
                                             $result = mysqli_query($conn, $sql);
 
                                             if ($result) {
@@ -196,7 +196,7 @@ if (!isset($_SESSION["email"])) {
                                             <select name="projet" id="" class="block rounded-md border-0 py-1.5 pl-2 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 
                                                 <?php
-                                                $query = "SELECT id_pro,nom_pro FROM projet";
+                                                $query = "SELECT id_pro,nom_pro FROM projet where nom_pro <> 'none'";
                                                 $result = mysqli_query($conn, $query);
 
                                                 while ($row = mysqli_fetch_assoc($result)) {
@@ -264,7 +264,7 @@ if (!isset($_SESSION["email"])) {
 
                                         <tr>
                                             <?php
-                                            $sql = "SELECT * FROM projet inner join  utilisateur  on utilisateur.projet = projet.id_pro and utilisateur.role = 'ScrumMaster' ";
+                                            $sql = "SELECT * FROM projet inner join  utilisateur  on utilisateur.projet = projet.id_pro and utilisateur.role = 'ScrumMaster'  and nom_pro <> 'none' ";
                                             $result = mysqli_query($conn, $sql);
 
                                             if ($result) {

@@ -113,7 +113,7 @@ if (!isset($_SESSION["email"])) {
                                         <tr>
 
                                             <?php
-                                            $sql = "SELECT * FROM equipe";
+                                            $sql = "SELECT * FROM equipe  where nom_equipe <> 'none'";
                                             $result = mysqli_query($conn, $sql);
 
                                             if ($result) {
@@ -178,7 +178,7 @@ if (!isset($_SESSION["email"])) {
                                             <select name="id_equipe" id="" class="block rounded-md border-0 py-1.5 pl-2 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 
                                                 <?php
-                                                $query = "SELECT id_equipe,nom_equipe FROM equipe";
+                                                $query = "SELECT id_equipe,nom_equipe FROM equipe where nom_equipe <>'none'";
                                                 $result = mysqli_query($conn, $query);
 
                                                 while ($row = mysqli_fetch_assoc($result)) {
@@ -196,7 +196,7 @@ if (!isset($_SESSION["email"])) {
                                             <select name="id_pro" id="" class="block rounded-md border-0 py-1.5 pl-2 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 
                                                 <?php
-                                                $query = "SELECT id_pro,nom_pro FROM projet";
+                                                $query = "SELECT id_pro,nom_pro FROM projet  where nom_pro <> 'none'";
                                                 $result = mysqli_query($conn, $query);
 
                                                 while ($row = mysqli_fetch_assoc($result)) {
@@ -244,7 +244,7 @@ if (!isset($_SESSION["email"])) {
 
                                         <tr>
                                             <?php
-                                            $sql = "SELECT * FROM equipe inner join  projet  on equipe.id_pro = projet.id_pro";
+                                            $sql = "SELECT * FROM equipe inner join  projet  on equipe.id_pro = projet.id_pro  where nom_pro <> 'none'";
                                             $result = mysqli_query($conn, $sql);
 
                                             if ($result) {
