@@ -289,7 +289,7 @@ if (!isset($_SESSION["email"])) {
 
 
                                                     <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-center text-sm font-medium sm:pr-6 lg:pr-8">
-                                                        <a href="deleteproject.php?id_pro=<?php echo $row['id_pro']; ?>" class="text-indigo-600 hover:text-indigo-900">Supprimer<span class="sr-only"></span></a>
+                                                        <a href="deletesm.php?id=<?php echo $row['id']; ?>" class="text-indigo-600 hover:text-indigo-900">Supprimer<span class="sr-only"></span></a>
                                                     </td>
                                         </tr>
                                 <?php
